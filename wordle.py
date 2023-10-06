@@ -1,7 +1,6 @@
 import random
-
-#Extra mile: trying to make the code pick a random word from a list and display the underscores accordingly
-#Using the random module
+#Extra mile: The code picks a random word from a word list and displays the underscores accordingly
+#Using random.choice() and len() respectively
 
 wordlist = ['mosiah', 'nephi', 'jacob', 'omni', 'helaman', 'alma', 'ether', 'moroni', 'jarom', 'enos']
 secret = random.choice(wordlist)
