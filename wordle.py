@@ -12,17 +12,17 @@ print("welcome to the guessing game!")
 print(f"Your hint is (the book of mormon): {len(secret) * '_ '} ")
 
 while KeepPlaying == "yes":
-    guess = input("What is your guess? ")
+    guess = input("What is your guess? ").lower()
     attempt += 1 
     if guess == secret:
-        print("congratulations! you guessed correctly!")
+        print("Congratulations! you guessed correctly!")
         KeepPlaying = "no"
         break
     elif guess != secret:
         if len(guess) < len(secret):
-            print("Your guess had less letters than the word does!")
+            print("Your guess has less letters than the word does!")
         if len(guess) > len(secret):
-            print("Your guess had more letters than the word does!")
-        print(f"{attempt} Attempt. Try again!")
+            print("Your guess has more letters than the word does!")
+        print(f"{attempt} Attempt(s). Try again!")
 
 
