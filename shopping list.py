@@ -14,9 +14,9 @@ cost = ""
 
 def welcome():
     
-    print("Choose an option from the menu to start.\n")
+    print("Choose an option from the menu to start.")
     print("*" * 10)
-    print(f"\n1.ADD items\n2.DISPLAY the contents of the shopping cart \n3.REMOVE an item \n4.Compute the TOTAL \n5.Quit\n")
+    print(f"1.ADD items\n2.DISPLAY the contents of the shopping cart \n3.REMOVE an item \n4.Compute the TOTAL \n5.Quit\n")
 
    
 def add_items():
@@ -42,7 +42,7 @@ def display_items():
 
 print("\n\nWelcome to you shopping list program!")
 
-while userchoice != "4":
+while userchoice != "4" or userchoice != "quit":
     welcome()
     userchoice = input("Choose from the menu: ").lower()
 
@@ -83,4 +83,5 @@ while userchoice != "4":
 
     else:
         print("Invalid command!")
+        
 
