@@ -29,19 +29,35 @@ def windchill(temperature, unit):
         
         
         elif unit == "C":
+                    
+            for speed in speeds_in_mph:
+                V = float(speed)
+                T = (user_temperature * 9/5) + 32
+
+                wct = 35.74 + 0.6215 * T - 35.75 * V**0.16 + 0.4275 * T * V**0.16
+                print(f"At temperature {user_temperature}{unit_of_measure}, and wind speed {V:.1f}MPH, the windchill is: {wct:.2f}F")
+            
+
+### Displaying the celsius result in full (using celcius and km/h):
+        
+            print("\n" + "###" * 5 + "extra mile work" + "###" * 5 + "\n")
+
             for speed in speeds_in_kmh:    
                 V = float(speed)
                 T = user_temperature
 
                 wct = 13.12 + 0.6215 * T - 11.37 * V**0.16 + 0.3965 * T * V**0.16
-                print(f"At temperature {user_temperature}{unit_of_measure}, and wind speed {V:.1f}KM/h, the windchill is: {wct:.2f}C")
+                print(f"At temperature {user_temperature}{unit_of_measure}, and wind speed {V:.1f}KM/h, the windchill is: {wct:.2f}C")                
 
         else:
-             print("Enter a temperature then choose (F)ahrenheit or (C)elcius.")
+            print("Oops!")
+
+
 
 
 
 user_temperature = float(input("Enter a temperature: "))
+
 unit_of_measure = input("In Fahrenheit or Celcius? [F/C]: ").capitalize()
 
 windchill(user_temperature, unit_of_measure)
