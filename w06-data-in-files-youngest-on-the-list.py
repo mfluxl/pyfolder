@@ -12,8 +12,7 @@ people = [
 youngest_age = 150
 youngest_name = ""
 
-for person in people:
-    person = person.strip()    
+for person in people:    
     person_list = person.split()
 
     name = person_list[0]
