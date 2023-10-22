@@ -36,6 +36,9 @@ def windchill(temperature, unit):
                 wct = 13.12 + 0.6215 * T - 11.37 * V**0.16 + 0.3965 * T * V**0.16
                 print(f"At temperature {user_temperature}{unit_of_measure}, and wind speed {V:.1f}KM/h, the windchill is: {wct:.2f}C")
 
+        else:
+             print("Enter a temperature then choose (F)ahrenheit or (C)elcius.")
+
 
 
 user_temperature = float(input("Enter a temperature: "))
